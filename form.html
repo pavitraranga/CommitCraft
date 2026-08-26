@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/register" method="POST" enctype="multipart/form-data">
+<fieldset>
+<legend>Personal Details</legend>
+<label for="name">Full Name</label>
+<input type="text" id="name" name="fullName" required minlength="3">
+<label for="phone">Phone</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+title="Enter a 10 digit number" required>
+</fieldset>
+<fieldset>
+<legend>Gender</legend>
+<input type="radio" id="m" name="gender" value="male">
+<label for="m">Male</label>
+<input type="radio" id="f" name="gender" value="female">
+<label for="f">Female</label>
+</fieldset>
+<label for="course">Course</label>
+<select id="course" name="course" required>
+<option value="">-- Select --</option>
+<option value="frontend">Frontend</option>
+</select>
+<input type="file" id="cv" name="resume" accept=".pdf">
+<input type="checkbox" id="terms" name="terms" value="accepted" required>
+<label for="terms">I accept the terms</label>
+<button type="submit">Register</button>
+</form>
+</body>
+</html>
